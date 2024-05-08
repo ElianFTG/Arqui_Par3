@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Card Bank",
+    "description": "Card of money bank",
+    "type": "object",
+    "properties": {
+        "card_number": {
+            "description": "The unique identifier for a card",
+            "type": "string",
+            "pattern": "^[0-9]{16}$"
+        },
+        "cvv": {
+            "description": "CVV from card",
+            "type": "string",
+            "pattern": "^[0-9]{3}$"
+        },
+        "expiration_date": {
+            "description": "Expiration date",
+            "type": "string",
+            "pattern": "^(0[1-9]|1[0-2])/(20[2-9][0-9]|2[1-9][0-9]{2})$"
+        }
+    },
+    "required": ["card_number", "cvv", "expiration_date"]
+}
